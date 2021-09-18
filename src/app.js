@@ -1,6 +1,6 @@
 //Progression 1:
 //We've got some basic info about Karen's home
-function moreAboutHome(address, distanceFromTown, hasNeighbours)
+let moreAboutHome=(address, distanceFromTown, hasNeighbours)=>
 {
     
     let a = typeof(address)+typeof(distanceFromTown)+typeof(hasNeighbours);
@@ -11,7 +11,7 @@ function moreAboutHome(address, distanceFromTown, hasNeighbours)
 }
 
 //Progression 2:
-function moreAboutKaren(parents, noOfSiblings, isNuclearFamily)
+let moreAboutKaren = (parents, noOfSiblings, isNuclearFamily) =>
 {
     if (typeof(parents)==='string'&&typeof(noOfSiblings)==='number'&&typeof(isNuclearFamily)==='boolean')
      return true;
@@ -22,7 +22,7 @@ function moreAboutKaren(parents, noOfSiblings, isNuclearFamily)
 }
 
 //Progression 3:
-function doesFriendExist(ageInText, ageInNumber)
+let doesFriendExist = (ageInText, ageInNumber)=>
 {
     if(isNaN(ageInText))
      return ageInText;
@@ -40,7 +40,7 @@ function doesFriendExist(ageInText, ageInNumber)
 //On her way to the river, she ate another z sweets every n meters travelled
 //Her friend divided the remaining sweets into 2 parts for each
 //How many sweets did her friend get to eat?
-function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel)
+let sweetTooth=(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMeters, metersToTravel)=>
 {
     if(typeof(totalNoOfSweets)!=='number'||typeof(sweetsConsumedByKaren)!=='number'||typeof(sweetsConsumedInNMeters)!=='number'||typeof(metersToTravel)!=='number')
      {let a="No sweets for Karen's friend";
@@ -49,15 +49,15 @@ function sweetTooth(totalNoOfSweets, sweetsConsumedByKaren, sweetsConsumedInNMet
      else if(totalNoOfSweets==0&&sweetsConsumedByKaren==0&&sweetsConsumedInNMeters==0&&metersToTravel==0)
         return 0; 
 
-    
-     return ((totalNoOfSweets-sweetsConsumedByKaren)+sweetsConsumedInNMeters)/2;     
+    else
+     return ((totalNoOfSweets - sweetsConsumedByKaren - sweetsConsumedInNMeters * metersToTravel)/2);     
        
 }
 
 //Progression 5:
 //As Lily moves closer, it gets colder. She checks the temperature on her mobile
 //It only shows in fahrenheit. Convert the data to celsius and return it.
-function convertToCelsius(fahrenheit)
+let convertToCelsius =(fahrenheit)=>
 {
     //return (5/9) * (fahrenheit-32);
 
@@ -77,7 +77,7 @@ function convertToCelsius(fahrenheit)
 //3. Counsel her daughter herself
 //4. Lock her daughter in her room
 //Given a value, return which of these above actions Lily would take
- function aDifficultChoice(choice)
+ let aDifficultChoice=(choice)=>
  {
      switch(choice)
      {
